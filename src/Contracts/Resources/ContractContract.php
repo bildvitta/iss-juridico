@@ -10,5 +10,6 @@ interface ContractContract
     public function search(array $query = []): object;
 
     public function find(string $uuid): object;
+
     public function create(array $body = []): object;
 }
