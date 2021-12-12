@@ -2,9 +2,9 @@
 
 namespace Bildvitta\IssJuridico;
 
+use Bildvitta\IssJuridico\Commands\IssJuridicoCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Bildvitta\IssJuridico\Commands\IssJuridicoCommand;
 
 class IssJuridicoServiceProvider extends PackageServiceProvider
 {
@@ -18,7 +18,7 @@ class IssJuridicoServiceProvider extends PackageServiceProvider
         $package
             ->name('iss-juridico')
             ->hasConfigFile();
-            //->hasViews()
+        //->hasViews()
             //->hasMigration('create_iss-juridico_table')
             //->hasCommand(IssJuridicoCommand::class);
     }

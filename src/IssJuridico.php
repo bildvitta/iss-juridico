@@ -6,7 +6,6 @@ use Bildvitta\IssJuridico\Contracts\IssJuridicoFactory;
 use Bildvitta\IssJuridico\Resources\Contracts;
 use Illuminate\Http\Client\Factory as HttpClient;
 use Illuminate\Http\Client\PendingRequest;
-use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
@@ -17,7 +16,7 @@ class IssJuridico extends HttpClient implements IssJuridicoFactory
 
     private ?string $token;
 
-    public function __construct(?string $token='')
+    public function __construct(?string $token = '')
     {
         parent::__construct();
 
@@ -60,6 +59,7 @@ class IssJuridico extends HttpClient implements IssJuridicoFactory
             'client_secret' => $secretId,
             'scope' => '*',
         ]);
+
         return $response->json('access_token');
     }
 
@@ -76,7 +76,7 @@ class IssJuridico extends HttpClient implements IssJuridicoFactory
         return array_merge(
             self::DEFAULT_HEADERS,
             [
-                'Almobi-Host' => Config::get('app.slug', '')
+                'Almobi-Host' => Config::get('app.slug', ''),
             ]
         );
     }
