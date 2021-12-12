@@ -2,9 +2,9 @@
 
 namespace Bildvitta\IssJuridico\Tests;
 
+use Bildvitta\IssJuridico\IssJuridicoServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Bildvitta\IssJuridico\IssJuridicoServiceProvider;
 
 class TestCase extends Orchestra
 {
