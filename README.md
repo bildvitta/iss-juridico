@@ -23,28 +23,18 @@ You can install the package via composer:
 composer require bildvitta/iss-juridico
 ```
 
-You can publish and run the migrations with:
 
-```bash
-php artisan vendor:publish --tag="iss-juridico_without_prefix-migrations"
-php artisan migrate
-```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --tag="iss-juridico_without_prefix-config"
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="example-views"
-```
+php artisan vendor:publish --provider="Bildvitta\IssCrm\IssJuridicoServiceProvider" --tag="iss-juridico-config"```
 
 This is the contents of the published config file:
 
 ```php
 return [
+  'base_uri' => env('MS_JURIDICO_BASE_URI', 'https://api-dev-juridico.nave.dev'),
+  'prefix' => env('MS_JURIDICO_API_PREFIX', '/api')
 ];
 ```
 
