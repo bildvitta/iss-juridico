@@ -23,7 +23,8 @@ composer require bildvitta/iss-juridico
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Bildvitta\IssCrm\IssJuridicoServiceProvider" --tag="iss-juridico-config"```
+php artisan vendor:publish --provider="Bildvitta\IssCrm\IssJuridicoServiceProvider" --tag="iss-juridico-config"
+```
 
 This is the contents of the published config file:
 
@@ -37,8 +38,17 @@ return [
 ## Usage
 
 ```php
-$iss-juridico = new Bildvitta\IssJuridico();
-echo $iss-juridico->echoPhrase('Hello, Bildvitta!');
+//Search contracts
+$issJuridico = new Bildvitta\IssJuridico();
+$contracts = collect($issJuridico->contracts()->search()->results);
+
+//Create contract
+$issJuridico = new Bildvitta\IssJuridico();
+$newContract = $issJuridico->contracts()->create([
+    'client' => '86aecb0f-d38e-4558-a889-3d1a183a0120',
+    'real_estate_development' => 'ced1cde0-61dd-42f3-8d3d-c8f92580c1e0',
+    'sales' => 'ced1cde0-61dd-42f3-8d3d-c8f92580c1e0'
+]);
 ```
 
 ## Testing
@@ -61,7 +71,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Michael](https://github.com/bildvitta)
+- [BILDVITTA/Michael](https://github.com/bildvitta)
 - [All Contributors](../../contributors)
 
 ## License
