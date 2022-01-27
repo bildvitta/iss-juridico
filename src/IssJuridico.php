@@ -4,6 +4,7 @@ namespace Bildvitta\IssJuridico;
 
 use Bildvitta\IssJuridico\Contracts\IssJuridicoFactory;
 use Bildvitta\IssJuridico\Resources\Contracts;
+use Bildvitta\IssJuridico\Resources\Programmatic\Programmatic;
 use Illuminate\Http\Client\Factory as HttpClient;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Cache;
@@ -84,5 +85,13 @@ class IssJuridico extends HttpClient implements IssJuridicoFactory
     public function contracts(): Contracts
     {
         return new Contracts($this);
+    }
+
+    /**
+     * @return Programmatic
+     */
+    public function programmatic(): Programmatic
+    {
+        return new Programmatic($this);
     }
 }
