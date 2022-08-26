@@ -19,7 +19,7 @@ class IssJuridicoServiceProvider extends PackageServiceProvider
             ->name('iss-juridico')
             ->hasConfigFile();
         //->hasViews()
-            //->hasMigration('create_iss-juridico_table')
-            //->hasCommand(IssJuridicoCommand::class);
+        //->hasMigration('create_iss-juridico_table')
+        //->hasCommand(IssJuridicoCommand::class);
     }
 }
