@@ -4,10 +4,9 @@ namespace Bildvitta\IssJuridico;
 
 use Bildvitta\IssJuridico\Contracts\IssJuridicoFactory;
 use Bildvitta\IssJuridico\Resources\Contracts;
-use Bildvitta\IssJuridico\Resources\Programmatic\Programmatic;
+use Bildvitta\IssJuridico\Resources\Documents;
 use Illuminate\Http\Client\Factory as HttpClient;
 use Illuminate\Http\Client\PendingRequest;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 
@@ -35,12 +34,7 @@ class IssJuridico extends HttpClient implements IssJuridicoFactory
 
         if ($programmatic) {
             $clientId = Config::get('hub.programatic_access.client_id');
-            if (Cache::has($clientId)) {
-                $accessToken = Cache::get($clientId);
-            } else {
-                $accessToken = $this->getToken();
-                Cache::add($clientId, $accessToken, now()->addSeconds(31536000));
-            }
+            $accessToken = $this->getToken();
             $this->token = $accessToken;
         }
 
@@ -82,16 +76,9 @@ class IssJuridico extends HttpClient implements IssJuridicoFactory
         );
     }
 
-    public function contracts(): Contracts
+    public function documents(): Documents
     {
-        return new Contracts($this);
+        return new Documents($this);
     }
 
-    /**
-     * @return Programmatic
-     */
-    public function programmatic(): Programmatic
-    {
-        return new Programmatic($this);
-    }
 }
