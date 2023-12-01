@@ -22,4 +22,10 @@ class IssJuridicoServiceProvider extends PackageServiceProvider
         //->hasMigration('create_iss-juridico_table')
         //->hasCommand(IssJuridicoCommand::class);
     }
+
+    public function register():void
+    {
+        $this->app->singleton('juridico', fn($app, $args)=> new IssJuridico($args[0]??request()->bearerToken()));   
+    }
+
 }
