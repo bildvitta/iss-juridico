@@ -16,7 +16,8 @@ class IssJuridicoServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package->name('iss-juridico')
-        ->hasConfigFile();
+        ->hasConfigFile()
+        ->hasRoute('api');
         //->hasViews()
         //->hasMigration('create_iss-juridico_table')
         //->hasCommand(IssJuridicoCommand::class);
@@ -25,7 +26,7 @@ class IssJuridicoServiceProvider extends PackageServiceProvider
     public function register(): void
     {
         parent::register();
-        
+
         $this->app->singleton('iss-juridico', fn ($app, $args) => new IssJuridico($args[0] ?? request()->bearerToken()));
     }
 
