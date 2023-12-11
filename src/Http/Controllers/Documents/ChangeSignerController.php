@@ -2,7 +2,7 @@
 
 namespace BildVitta\IssJuridico\Http\Controllers\Documents;
 
-use BildVitta\IssJuridico\Http\Requests\ChangeSignerRequest;
+use BildVitta\IssJuridico\Http\Requests\Documents\ChangeSignerRequest;
 use Illuminate\Http\JsonResponse;
 
 class ChangeSignerController extends DocumentController

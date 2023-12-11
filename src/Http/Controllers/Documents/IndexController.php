@@ -2,7 +2,7 @@
 
 namespace BildVitta\IssJuridico\Http\Controllers\Documents;
 
-use BildVitta\IssJuridico\Http\Requests\IndexRequest;
+use BildVitta\IssJuridico\Http\Requests\Documents\IndexRequest;
 use Illuminate\Http\JsonResponse;
 
 class IndexController extends DocumentController

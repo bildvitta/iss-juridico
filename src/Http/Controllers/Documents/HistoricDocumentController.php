@@ -2,7 +2,7 @@
 
 namespace BildVitta\IssJuridico\Http\Controllers\Documents;
 
-use BildVitta\IssJuridico\Http\Requests\HistoricDocumentRequest;
+use BildVitta\IssJuridico\Http\Requests\Documents\HistoricDocumentRequest;
 use Illuminate\Http\JsonResponse;
 
 class HistoricDocumentController extends DocumentController

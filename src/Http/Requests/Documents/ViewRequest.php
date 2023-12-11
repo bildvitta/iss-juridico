@@ -1,6 +1,6 @@
 <?php
 
-namespace BildVitta\IssJuridico\Http\Requests;
+namespace BildVitta\IssJuridico\Http\Requests\Documents;
 
 use App\Models\Document;
 use App\Models\Products\Product;
@@ -10,7 +10,7 @@ use App\Rules\CheckExists;
 use App\Rules\Settings\Products\CheckInitialSettings;
 use Illuminate\Foundation\Http\FormRequest;
 
-class SendRequest extends FormRequest
+class ViewRequest extends FormRequest
 {
     public function authorize(): bool
     {

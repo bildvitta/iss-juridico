@@ -2,7 +2,7 @@
 
 namespace BildVitta\IssJuridico\Http\Controllers\Documents;
 
-use BildVitta\IssJuridico\Http\Requests\ResendSignerRequest;
+use BildVitta\IssJuridico\Http\Requests\Documents\ResendSignerRequest;
 use Illuminate\Http\JsonResponse;
 
 class ResendSignerController extends DocumentController

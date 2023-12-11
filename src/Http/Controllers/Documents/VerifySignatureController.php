@@ -2,7 +2,7 @@
 
 namespace BildVitta\IssJuridico\Http\Controllers\Documents;
 
-use BildVitta\IssJuridico\Http\Requests\VerifySignatureRequest;
+use BildVitta\IssJuridico\Http\Requests\Documents\VerifySignatureRequest;
 use Illuminate\Http\JsonResponse;
 
 class VerifySignatureController extends DocumentController

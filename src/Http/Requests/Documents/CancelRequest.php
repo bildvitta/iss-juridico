@@ -1,10 +1,11 @@
 <?php
 
-namespace BildVitta\IssJuridico\Http\Requests;
+namespace BildVitta\IssJuridico\Http\Requests\Documents;
 
+use Http\Discovery\Exception\NotFoundException;
 use Illuminate\Foundation\Http\FormRequest;
 
-class ResendSignerRequest extends FormRequest
+class CancelRequest extends FormRequest
 {
     public function authorize(): bool
     {

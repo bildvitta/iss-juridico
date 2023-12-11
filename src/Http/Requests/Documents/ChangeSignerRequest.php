@@ -1,10 +1,10 @@
 <?php
 
-namespace BildVitta\IssJuridico\Http\Requests;
+namespace BildVitta\IssJuridico\Http\Requests\Documents;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class VerifySignatureRequest extends FormRequest
+class ChangeSignerRequest extends FormRequest
 {
     public function authorize(): bool
     {

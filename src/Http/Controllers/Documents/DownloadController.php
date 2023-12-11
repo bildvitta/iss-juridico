@@ -2,7 +2,7 @@
 
 namespace BildVitta\IssJuridico\Http\Controllers\Documents;
 
-use BildVitta\IssJuridico\Http\Requests\DownloadRequest;
+use BildVitta\IssJuridico\Http\Requests\Documents\DownloadRequest;
 use Illuminate\Http\JsonResponse;
 
 class DownloadController extends DocumentController
