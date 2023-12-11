@@ -8,11 +8,6 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class IssJuridicoServiceProvider extends PackageServiceProvider
 {
-    public function register(): void
-    {
-        $this->app->singleton('iss-juridico', fn ($app, $args) => new IssJuridico($args[0] ?? request()->bearerToken()));
-    }
-
     public function configurePackage(Package $package): void
     {
         /*
