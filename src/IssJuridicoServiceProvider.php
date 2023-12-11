@@ -2,7 +2,6 @@
 
 namespace Bildvitta\IssJuridico;
 
-use Bildvitta\IssJuridico\Commands\IssJuridicoCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
