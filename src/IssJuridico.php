@@ -19,6 +19,9 @@ class IssJuridico extends HttpClient implements IssJuridicoFactory
     public function __construct(?string $token = '')
     {
         parent::__construct();
+        if(is_null($token)){
+            $token = '';
+        }
 
         $programmatic = true;
         if ($token != '') {
