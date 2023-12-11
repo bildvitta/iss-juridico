@@ -10,10 +10,8 @@ class IssJuridicoCommand extends Command
 
     public $description = 'My command';
 
-    public function handle(): int
+    public function handle()
     {
         $this->comment('All done');
-
-        return self::SUCCESS;
     }
 }

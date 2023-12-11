@@ -8,6 +8,11 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class IssJuridicoServiceProvider extends PackageServiceProvider
 {
+    public function register(): void
+    {
+        $this->app->singleton('iss-juridico', fn ($app, $args) => new IssJuridico($args[0] ?? request()->bearerToken()));
+    }
+
     public function configurePackage(Package $package): void
     {
         /*
@@ -15,17 +20,12 @@ class IssJuridicoServiceProvider extends PackageServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
-        $package
-            ->name('iss-juridico')
-            ->hasConfigFile();
+        $package->name('iss-juridico')
+        ->hasConfigFile();
         //->hasViews()
         //->hasMigration('create_iss-juridico_table')
         //->hasCommand(IssJuridicoCommand::class);
     }
 
-    public function register(): void
-    {
-        $this->app->singleton('juridico', fn ($app, $args) => new IssJuridico($args[0] ?? request()->bearerToken()));
-    }
 
 }
