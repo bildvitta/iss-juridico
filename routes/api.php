@@ -1,15 +1,15 @@
 <?php
 
-use BildVitta\IssJuridico\Http\Controllers\Documents\CancelController;
-use BildVitta\IssJuridico\Http\Controllers\Documents\ChangeSignerController;
-use BildVitta\IssJuridico\Http\Controllers\Documents\DownloadController;
-use BildVitta\IssJuridico\Http\Controllers\Documents\HistoricController;
-use BildVitta\IssJuridico\Http\Controllers\Documents\HistoricDocumentController;
-use BildVitta\IssJuridico\Http\Controllers\Documents\IndexController;
-use BildVitta\IssJuridico\Http\Controllers\Documents\ResendSignerController;
-use BildVitta\IssJuridico\Http\Controllers\Documents\SendController;
-use BildVitta\IssJuridico\Http\Controllers\Documents\VerifySignatureController;
-use BildVitta\IssJuridico\Http\Controllers\Documents\ViewController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\CancelController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\ChangeSignerController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\DownloadController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\HistoricController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\HistoricDocumentController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\IndexController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\ResendSignerController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\SendController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\VerifySignatureController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\ViewController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('hub.auth')->group(function () {

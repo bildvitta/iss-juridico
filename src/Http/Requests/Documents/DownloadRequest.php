@@ -1,6 +1,6 @@
 <?php
 
-namespace BildVitta\IssJuridico\Http\Requests\Documents;
+namespace Bildvitta\IssJuridico\Http\Requests\Documents;
 
 use Illuminate\Foundation\Http\FormRequest;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace BildVitta\IssJuridico\Http\Controllers\Documents;
+namespace Bildvitta\IssJuridico\Http\Controllers\Documents;
 
-use BildVitta\IssJuridico\Http\Requests\Documents\CancelRequest;
+use Bildvitta\IssJuridico\Http\Requests\Documents\CancelRequest;
 use Illuminate\Http\JsonResponse;
 
 class CancelController extends DocumentController

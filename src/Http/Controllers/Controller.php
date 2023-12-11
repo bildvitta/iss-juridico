@@ -1,7 +1,7 @@
 <?php
 
 
-namespace BildVitta\IssJuridico\Http\Controllers;
+namespace Bildvitta\IssJuridico\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

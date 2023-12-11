@@ -1,8 +1,8 @@
 <?php
 
-namespace BildVitta\IssJuridico\Http\Controllers\Documents;
+namespace Bildvitta\IssJuridico\Http\Controllers\Documents;
 
-use BildVitta\IssJuridico\Http\Requests\Documents\SendRequest;
+use Bildvitta\IssJuridico\Http\Requests\Documents\SendRequest;
 use Illuminate\Http\JsonResponse;
 
 class SendController extends DocumentController

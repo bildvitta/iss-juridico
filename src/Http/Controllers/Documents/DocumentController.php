@@ -1,8 +1,8 @@
 <?php
 
-namespace BildVitta\IssJuridico\Http\Controllers\Documents;
+namespace Bildvitta\IssJuridico\Http\Controllers\Documents;
 
-use BildVitta\IssJuridico\Http\Controllers\Controller;
+use Bildvitta\IssJuridico\Http\Controllers\Controller;
 
 class DocumentController extends Controller
 {

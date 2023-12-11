@@ -1,8 +1,8 @@
 <?php
 
-namespace BildVitta\IssJuridico\Http\Controllers\Documents;
+namespace Bildvitta\IssJuridico\Http\Controllers\Documents;
 
-use BildVitta\IssJuridico\Http\Requests\Documents\ResendSignerRequest;
+use Bildvitta\IssJuridico\Http\Requests\Documents\ResendSignerRequest;
 use Illuminate\Http\JsonResponse;
 
 class ResendSignerController extends DocumentController
