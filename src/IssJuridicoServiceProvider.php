@@ -26,4 +26,13 @@ class IssJuridicoServiceProvider extends PackageServiceProvider
         //->hasMigration('create_iss-juridico_table')
         //->hasCommand(IssJuridicoCommand::class);
     }
+
+    public function packageBooted()
+    {
+        if ($this->package->hasRoute('api')) {
+            $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
+        }
+    }
+
+
 }
