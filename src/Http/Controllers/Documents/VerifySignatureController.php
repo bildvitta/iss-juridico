@@ -11,7 +11,7 @@ class VerifySignatureController extends DocumentController
     {
         return response()->json(
             [
-                'redirect' => app('juridico')->documents->verifySignatures($document)
+                'redirect' => app('juridico')->documents()->verifySignatures($document)
             ]
         );
     }

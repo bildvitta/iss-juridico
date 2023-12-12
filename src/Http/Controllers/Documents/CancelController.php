@@ -11,7 +11,7 @@ class CancelController extends DocumentController
     {
         return response()->json(
             [
-                'redirect' => app('juridico')->documents->cancel($request, $document)
+                'redirect' => app('juridico')->documents()->cancel($request, $document)
             ]
         );
     }

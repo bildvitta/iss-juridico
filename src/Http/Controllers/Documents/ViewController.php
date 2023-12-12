@@ -11,7 +11,7 @@ class ViewController extends DocumentController
     {
         return response()->json(
             [
-                'redirect' => app('juridico')->documents->view($request)
+                'redirect' => app('juridico')->documents()->view($request)
             ]
         );
     }

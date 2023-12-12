@@ -11,7 +11,7 @@ class HistoricController extends DocumentController
     {
         return response()->json(
             [
-                'redirect' => app('juridico')->documents->historic($request)
+                'redirect' => app('juridico')->documents()->historic($request)
             ]
         );
     }

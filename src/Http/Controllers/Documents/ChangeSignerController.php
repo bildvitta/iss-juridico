@@ -11,7 +11,7 @@ class ChangeSignerController extends DocumentController
     {
         return response()->json(
             [
-                'redirect' => app('juridico')->documents->changeSigner($request, $document, $signerDocument)
+                'redirect' => app('juridico')->documents()->changeSigner($request, $document, $signerDocument)
             ]
         );
     }

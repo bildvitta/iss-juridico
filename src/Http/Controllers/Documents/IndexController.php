@@ -11,7 +11,7 @@ class IndexController extends DocumentController
     {
         return response()->json(
             [
-                'redirect' => app('juridico')->documents->send($request)
+                'redirect' => app('juridico')->documents()->list($request)
             ]
         );
     }

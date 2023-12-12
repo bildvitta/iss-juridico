@@ -11,7 +11,7 @@ class ResendSignerController extends DocumentController
     {
         return response()->json(
             [
-                'redirect' => app('juridico')->documents->resendSigner($document, $signerDocument)
+                'redirect' => app('juridico')->documents()->resendSigner($document, $signerDocument)
             ]
         );
     }

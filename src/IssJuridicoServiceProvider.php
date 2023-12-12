@@ -26,7 +26,7 @@ class IssJuridicoServiceProvider extends PackageServiceProvider
     {
         parent::register();
 
-        $this->app->singleton('iss-juridico', fn ($app, $args) => new IssJuridico($args[0] ?? request()->bearerToken()));
+        $this->app->singleton('juridico', fn ($app, $args) => new IssJuridico($args[0] ?? request()->bearerToken()));
     }
 
 }
