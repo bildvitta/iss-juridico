@@ -10,9 +10,7 @@ class CancelController extends DocumentController
     public function __invoke(CancelRequest $request, $document): JsonResponse
     {
         return response()->json(
-            [
-                app('juridico')->documents()->cancel($request, $document)
-            ]
+            app('juridico')->documents()->cancel($request, $document)
         );
     }
 }

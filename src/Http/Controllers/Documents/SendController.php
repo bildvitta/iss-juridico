@@ -10,9 +10,7 @@ class SendController extends DocumentController
     public function __invoke(SendRequest $request): JsonResponse
     {
         return response()->json(
-            [
-                app('juridico')->documents()->send($request)
-            ]
+            app('juridico')->documents()->send($request)
         );
     }
 }
