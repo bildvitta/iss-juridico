@@ -19,7 +19,7 @@ class Documents
         return $this->juridico->request->get(
             '/documents',
             $data
-        )->throw()->object();
+        )->object();
     }
 
     public function send($data)
@@ -27,7 +27,7 @@ class Documents
         return $this->juridico->request->post(
             '/documents/send',
             $data
-        )->throw()->object();
+        )->object();
     }
 
     public function view($data)
@@ -35,7 +35,7 @@ class Documents
         return $this->juridico->request->post(
             '/documents/view',
             $data
-        )->throw()->object();
+        )->object();
     }
 
     public function historic($data)
@@ -43,7 +43,7 @@ class Documents
         return $this->juridico->request->get(
             sprintf('/documents/historic'),
             $data
-        )->throw()->object();
+        )->object();
     }
 
     public function historicDocument($uuidDocument,$data)
@@ -51,21 +51,21 @@ class Documents
         return $this->juridico->request->get(
             sprintf('/documents/%s/historic', $uuidDocument),
             $data
-        )->throw()->object();
+        )->object();
     }
 
     public function download($uuidDocument)
     {
         return $this->juridico->request->get(
             sprintf('/documents/%s/download', $uuidDocument),
-        )->throw()->object();
+        )->object();
     }
     
     public function verifySignatures($uuidDocument)
     {
         return $this->juridico->request->get(
             sprintf('/documents/%s/verify-signatures', $uuidDocument),
-        )->throw()->object();
+        )->object();
     }
     
     public function cancel($uuidDocument,$data)
@@ -73,14 +73,14 @@ class Documents
         return $this->juridico->request->get(
             sprintf('/documents/%s/cancel', $uuidDocument),
             $data
-        )->throw()->object();
+        )->object();
     }
 
     public function resendSigner($uuidDocument, $uuidSigner)
     {
         return $this->juridico->request->get(
             sprintf('/documents/%s/resend-signer/%s', $uuidDocument, $uuidSigner)
-        )->throw()->object();
+        )->object();
     }
 
     public function changeSigner($uuidDocument, $uuidSigner,$data)
@@ -88,7 +88,7 @@ class Documents
         return $this->juridico->request->get(
             sprintf('/documents/%s/change-signer/%s', $uuidDocument, $uuidSigner),
             $data
-        )->throw()->object();
+        )->object();
     }
     
 }
