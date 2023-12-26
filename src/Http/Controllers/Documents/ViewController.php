@@ -9,8 +9,10 @@ class ViewController extends DocumentController
 {
     public function __invoke(ViewRequest $request): JsonResponse
     {
+        $response = app('juridico')->documents()->view($request);
+        
         return response()->json(
-            app('juridico')->documents()->view($request)
+            $response, $response->status->code
         );
     }
 }

@@ -9,8 +9,10 @@ class DownloadController extends DocumentController
 {
     public function __invoke(DownloadRequest $request, $document): JsonResponse
     {
+        $response = app('juridico')->documents()->download($document);
+        
         return response()->json(
-            app('juridico')->documents()->download($document)
+            $response, $response->status->code
         );
     }
 }

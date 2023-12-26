@@ -9,8 +9,10 @@ class IndexController extends DocumentController
 {
     public function __invoke(IndexRequest $request): JsonResponse
     {
+        $response = app('juridico')->documents()->list($request);
+        
         return response()->json(
-            app('juridico')->documents()->list($request)
+            $response, $response->status->code
         );
     }
 }

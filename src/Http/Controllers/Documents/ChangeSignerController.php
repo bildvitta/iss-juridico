@@ -9,8 +9,10 @@ class ChangeSignerController extends DocumentController
 {
     public function __invoke(ChangeSignerRequest $request, $document, $signerDocument): JsonResponse
     {
+        $response = app('juridico')->documents()->changeSigner($request, $document, $signerDocument);
+        
         return response()->json(
-            app('juridico')->documents()->changeSigner($request, $document, $signerDocument)
+            $response, $response->status->code
         );
     }
 }
