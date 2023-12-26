@@ -11,7 +11,7 @@ class DownloadController extends DocumentController
     {
         return response()->json(
             [
-                'redirect' => app('juridico')->documents()->download($document)
+                app('juridico')->documents()->download($document)
             ]
         );
     }

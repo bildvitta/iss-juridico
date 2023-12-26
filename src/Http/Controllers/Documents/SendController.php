@@ -11,7 +11,7 @@ class SendController extends DocumentController
     {
         return response()->json(
             [
-                'redirect' => app('juridico')->documents()->send($request)
+                app('juridico')->documents()->send($request)
             ]
         );
     }
