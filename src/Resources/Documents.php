@@ -85,7 +85,7 @@ class Documents
 
     public function changeSigner($uuidDocument, $uuidSigner,$data)
     {
-        return $this->juridico->request->get(
+        return $this->juridico->request->put(
             sprintf('/documents/%s/change-signer/%s', $uuidDocument, $uuidSigner),
             $data
         )->object();
