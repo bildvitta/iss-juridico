@@ -70,7 +70,7 @@ class Documents
     
     public function cancel($uuidDocument,$data)
     {
-        return $this->juridico->request->get(
+        return $this->juridico->request->put(
             sprintf('/documents/%s/cancel', $uuidDocument),
             $data
         )->object();

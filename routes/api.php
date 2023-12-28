@@ -21,7 +21,7 @@ Route::middleware('hub.auth')->group(function () {
         Route::get('/{document}/historic')->name('historic-document')->uses(HistoricDocumentController::class);
         Route::get('/{document}/download')->name('download')->uses(DownloadController::class);
         Route::get('/{document}/verify-signatures')->name('verify-signatures')->uses(VerifySignatureController::class);
-        Route::get('/{document}/cancel')->name('cancel')->uses(CancelController::class);
+        Route::put('/{document}/cancel')->name('cancel')->uses(CancelController::class);
         Route::get('/{document}/resend-signer/{signerDocument}')->name('resend-signer')->uses(ResendSignerController::class);
         Route::put('/{document}/change-signer/{signerDocument}')->name('change-signer')->uses(ChangeSignerController::class);
     });
