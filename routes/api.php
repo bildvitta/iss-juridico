@@ -7,6 +7,7 @@ use Bildvitta\IssJuridico\Http\Controllers\Documents\HistoricController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\HistoricDocumentController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\IndexController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\ResendSignerController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\SelectController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\SendController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\VerifySignatureController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\ViewController;
@@ -18,6 +19,7 @@ Route::middleware('hub.auth')->group(function () {
         Route::post('/send')->name('send')->uses(SendController::class);
         Route::post('/view')->name('view')->uses(ViewController::class);
         Route::get('/historic')->name('historic')->uses(HistoricController::class);
+        Route::get('/select')->name('select')->uses(SelectController::class);
         Route::get('/{document}/historic')->name('historic-document')->uses(HistoricDocumentController::class);
         Route::get('/{document}/download')->name('download')->uses(DownloadController::class);
         Route::get('/{document}/verify-signatures')->name('verify-signatures')->uses(VerifySignatureController::class);

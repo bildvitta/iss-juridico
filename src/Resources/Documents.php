@@ -90,5 +90,12 @@ class Documents
             $data
         )->object();
     }
+
+    public function select($data){
+        return $this->juridico->request->get(
+            '/templates/select',
+            $data
+        )->object();
+    }
     
 }
