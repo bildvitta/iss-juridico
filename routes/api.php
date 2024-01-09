@@ -11,6 +11,7 @@ use Bildvitta\IssJuridico\Http\Controllers\Documents\SelectController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\SendController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\VerifySignatureController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\ViewController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\WebhookController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('hub.auth')->group(function () {
@@ -26,5 +27,12 @@ Route::middleware('hub.auth')->group(function () {
         Route::put('/{document}/cancel')->name('cancel')->uses(CancelController::class);
         Route::get('/{document}/resend-signer/{signerDocument}')->name('resend-signer')->uses(ResendSignerController::class);
         Route::put('/{document}/change-signer/{signerDocument}')->name('change-signer')->uses(ChangeSignerController::class);
+        Route::post('/webhook')->name('webhook')->uses(WebhookController::class);
+    });
+});
+
+Route::middleware('hub.programmatic')->group(function () {
+    Route::prefix('api/legal-documents/')->as('issjuridico.programmatic.legal-documents.')->group(function () {
+        Route::post('/webhook')->name('webhook')->uses(WebhookController::class);
     });
 });
