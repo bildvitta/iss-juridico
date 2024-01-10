@@ -20,14 +20,14 @@ class Webhook
     public ?string $action;
 
     /**
-     * @var string
+     * @var null|string
      */
-    public string $document_type_slug;
+    public ?string $document_type_slug;
 
     /**
-     * @var bool
+     * @var null|bool
      */
-    public bool $is_legal_validation;
+    public ?bool $is_legal_validation;
 
     /**
      * @var string
@@ -52,8 +52,8 @@ class Webhook
         $this->uuid_legal = $data['uuid_legal'];
         $this->external_id = $data['external_id'];
         $this->action = $data['action'] ?? null;
-        $this->document_type_slug = $data['document_type_slug'];
-        $this->is_legal_validation = $data['is_legal_validation'];
+        $this->document_type_slug = $data['document_type_slug'] ?? null;
+        $this->is_legal_validation = $data['is_legal_validation'] ?? null;
         $this->type = $data['type'];
         $this->message = $data['message'] ?? null;
         $this->signers = null;
