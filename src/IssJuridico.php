@@ -3,8 +3,8 @@
 namespace Bildvitta\IssJuridico;
 
 use Bildvitta\IssJuridico\Contracts\IssJuridicoFactory;
-use Bildvitta\IssJuridico\Resources\Contracts;
 use Bildvitta\IssJuridico\Resources\Documents;
+use Bildvitta\IssJuridico\Resources\Programmatic\Programmatic;
 use Illuminate\Http\Client\Factory as HttpClient;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Config;
@@ -84,4 +84,9 @@ class IssJuridico extends HttpClient implements IssJuridicoFactory
         return new Documents($this);
     }
 
+    public function programmatic(): Programmatic
+    {
+        return new Programmatic($this);
+    }
+    
 }
