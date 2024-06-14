@@ -3,6 +3,7 @@
 use Bildvitta\IssJuridico\Http\Controllers\Documents\CancelController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\ChangeSignerController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\DownloadController;
+use Bildvitta\IssJuridico\Http\Controllers\Documents\EditSignerController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\HistoricController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\HistoricDocumentController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\IndexController;
@@ -26,6 +27,7 @@ Route::middleware('hub.auth')->group(function () {
         Route::get('/{document}/verify-signatures')->name('verify-signatures')->uses(VerifySignatureController::class);
         Route::put('/{document}/cancel')->name('cancel')->uses(CancelController::class);
         Route::get('/{document}/resend-signer/{signerDocument}')->name('resend-signer')->uses(ResendSignerController::class);
+        Route::get('/{document}/change-signer/{signerDocument}/edit')->name('edit-signer')->uses(EditSignerController::class);
         Route::put('/{document}/change-signer/{signerDocument}')->name('change-signer')->uses(ChangeSignerController::class);
         Route::post('/webhook')->name('webhook')->uses(WebhookController::class);
     });

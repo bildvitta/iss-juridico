@@ -97,5 +97,12 @@ class Documents
             $data
         )->object();
     }
+
+    public function editSigner($uuidDocument, $uuidSigner)
+    {
+        return $this->juridico->request->get(
+            sprintf('/documents/%s/change-signer/%s/edit', $uuidDocument, $uuidSigner)
+        )->object();
+    }
     
 }
