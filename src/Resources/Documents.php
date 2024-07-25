@@ -38,6 +38,14 @@ class Documents
         )->object();
     }
 
+    public function file($data)
+    {
+        return $this->juridico->request->get(
+            '/documents/file',
+            $data
+        )->object();
+    }
+
     public function historic($data)
     {
         return $this->juridico->request->get(
@@ -50,6 +58,14 @@ class Documents
     {
         return $this->juridico->request->get(
             sprintf('/documents/%s/historic', $uuidDocument),
+            $data
+        )->object();
+    }
+
+    public function fileDocument($uuidDocument,$data)
+    {
+        return $this->juridico->request->get(
+            sprintf('/documents/%s/file', $uuidDocument),
             $data
         )->object();
     }
