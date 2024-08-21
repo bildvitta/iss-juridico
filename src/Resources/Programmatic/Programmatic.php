@@ -6,6 +6,7 @@ use Bildvitta\IssJuridico\IssJuridico;
 use Bildvitta\IssJuridico\Resources\Programmatic\Documents\Documents;
 use Bildvitta\IssJuridico\Resources\Programmatic\Historics\Historics;
 use Bildvitta\IssJuridico\Resources\Programmatic\SignerDocuments\SignerDocuments;
+use Bildvitta\IssJuridico\Resources\Programmatic\ViewDocuments\ViewDocuments;
 
 class Programmatic
 {
@@ -37,5 +38,10 @@ class Programmatic
     public function signerDocuments(): SignerDocuments
     {
         return new SignerDocuments($this->juridico);
+    }
+
+    public function viewDocuments(): ViewDocuments
+    {
+        return new ViewDocuments($this->juridico);
     }
 }
