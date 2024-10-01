@@ -7,7 +7,6 @@ use Bildvitta\IssJuridico\IssJuridico;
 class Documents
 {
     private IssJuridico $juridico;
-    
 
     public function __construct(IssJuridico $juridico)
     {
@@ -36,7 +35,7 @@ class Documents
             '/programmatic/documents/',
             $data
         )->object();
-    }   
+    }
 
     public function put($uuidDocument, $data)
     {
@@ -44,5 +43,13 @@ class Documents
             sprintf('/programmatic/documents/%s', $uuidDocument),
             $data
         )->object();
-    }   
+    }
+
+    public function cancel($data)
+    {
+        return $this->juridico->request->patch(
+            '/programmatic/documents/cancel',
+            $data
+        )->object();
+    }
 }
