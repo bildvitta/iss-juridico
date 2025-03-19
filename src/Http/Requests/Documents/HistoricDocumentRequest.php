@@ -21,7 +21,7 @@ class HistoricDocumentRequest extends FormRequest
     public function attributes(): array
     {
         return [
-           //
+            //
         ];
     }
 }

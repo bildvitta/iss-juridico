@@ -7,7 +7,6 @@ use Bildvitta\IssJuridico\IssJuridico;
 class SignerDocuments
 {
     private IssJuridico $juridico;
-    
 
     public function __construct(IssJuridico $juridico)
     {
@@ -20,7 +19,7 @@ class SignerDocuments
             '/programmatic/signer-documents/',
             $data
         )->object();
-    }      
+    }
 
     public function put($uuidSignerDocument, $data)
     {
@@ -28,5 +27,5 @@ class SignerDocuments
             sprintf('/programmatic/signer-documents/%s', $uuidSignerDocument),
             $data
         )->object();
-    }   
+    }
 }

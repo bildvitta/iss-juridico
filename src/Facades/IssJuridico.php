@@ -11,6 +11,6 @@ class IssJuridico extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'iss-juridico';
+        return \Bildvitta\IssJuridico\IssJuridico::class;
     }
 }

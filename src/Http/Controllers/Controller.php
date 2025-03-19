@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Bildvitta\IssJuridico\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -15,9 +14,6 @@ class Controller extends BaseController
     use DispatchesJobs;
     use ValidatesRequests;
 
-    /**
-     * @var JsonResponse
-     */
     protected JsonResponse $jsonResponse;
 
     /**
