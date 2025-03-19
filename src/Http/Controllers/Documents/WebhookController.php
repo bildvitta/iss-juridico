@@ -9,10 +9,6 @@ use Illuminate\Http\JsonResponse;
 
 class WebhookController extends DocumentController
 {
-    /**
-     * @param WebhookRequest $request
-     * @return JsonResponse
-     */
     public function __invoke(WebhookRequest $request): JsonResponse
     {
         $webhook = new Webhook($request->validated());

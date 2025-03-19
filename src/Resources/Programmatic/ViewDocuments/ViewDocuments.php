@@ -7,7 +7,6 @@ use Bildvitta\IssJuridico\IssJuridico;
 class ViewDocuments
 {
     private IssJuridico $juridico;
-    
 
     public function __construct(IssJuridico $juridico)
     {
@@ -21,7 +20,7 @@ class ViewDocuments
             $data
         )->object();
     }
-    
+
     public function show(string $saleUuid, string $externalModuleName = 'vendas'): object
     {
         return $this->juridico->request->get(
@@ -31,5 +30,5 @@ class ViewDocuments
                 'external_module_name' => $externalModuleName,
             ]
         )->object();
-    } 
+    }
 }

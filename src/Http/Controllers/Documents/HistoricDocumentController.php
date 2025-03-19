@@ -10,7 +10,7 @@ class HistoricDocumentController extends DocumentController
     public function __invoke(HistoricDocumentRequest $request, $document): JsonResponse
     {
         $response = app('juridico')->documents()->historicDocument($request, $document);
-        
+
         return response()->json(
             $response, $response->status->code
         );

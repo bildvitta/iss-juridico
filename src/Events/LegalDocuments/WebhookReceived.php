@@ -11,10 +11,5 @@ class WebhookReceived
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    /**
-     * @param Webhook $data
-     */
-    public function __construct(public Webhook $data)
-    {
-    }
+    public function __construct(public Webhook $data) {}
 }

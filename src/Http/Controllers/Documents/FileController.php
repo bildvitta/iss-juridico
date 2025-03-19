@@ -10,7 +10,7 @@ class FileController extends DocumentController
     public function __invoke(ViewRequest $request): JsonResponse
     {
         $response = app('juridico')->documents()->file($request);
-        
+
         return response()->json(
             $response, $response->status->code
         );

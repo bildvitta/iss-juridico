@@ -11,15 +11,10 @@ use Bildvitta\IssJuridico\Resources\Programmatic\ViewDocuments\ViewDocuments;
 
 class Programmatic
 {
-    /**
-     * @var IssJuridico
-     */
     private IssJuridico $juridico;
 
     /**
      * Customers constructor.
-     *
-     * @param IssJuridico $juridico
      */
     public function __construct(IssJuridico $juridico)
     {
