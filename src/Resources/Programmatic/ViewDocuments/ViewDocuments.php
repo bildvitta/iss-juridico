@@ -22,14 +22,11 @@ class ViewDocuments
         )->object();
     }
     
-    public function show(string $saleUuid, string $externalModuleName = 'vendas'): object
+    public function show(array $data): object
     {
         return $this->juridico->request->get(
             '/programmatic/view-documents/',
-            [
-                'external_id' => $saleUuid,
-                'external_module_name' => $externalModuleName,
-            ]
+            $data
         )->object();
     } 
 }
