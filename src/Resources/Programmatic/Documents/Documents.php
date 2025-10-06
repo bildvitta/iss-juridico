@@ -21,14 +21,6 @@ class Documents
         )->object();
     }
 
-    public function view($data)
-    {
-        return $this->juridico->request->post(
-            '/programmatic/documents/view',
-            $data
-        )->object();
-    }
-
     public function store($data)
     {
         return $this->juridico->request->post(
