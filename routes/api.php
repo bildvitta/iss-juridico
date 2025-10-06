@@ -21,7 +21,6 @@ Route::middleware('hub.auth')->group(function () {
     Route::prefix('api/legal-documents/')->as('issjuridico.legal-documents.')->group(function () {
         Route::get('/')->name('index')->uses(IndexController::class);
         Route::post('/send')->name('send')->uses(SendController::class);
-        Route::post('/view')->name('view')->uses(ViewController::class);
         Route::get('/file')->name('file')->uses(FileController::class);
         Route::get('/historic')->name('historic')->uses(HistoricController::class);
         Route::get('/select')->name('select')->uses(SelectController::class);

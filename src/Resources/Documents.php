@@ -30,14 +30,6 @@ class Documents
         )->object();
     }
 
-    public function view($data)
-    {
-        return $this->juridico->request->post(
-            '/documents/view',
-            $data
-        )->object();
-    }
-
     public function file($data)
     {
         return $this->juridico->request->get(
