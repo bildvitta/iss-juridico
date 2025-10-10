@@ -4,17 +4,17 @@ namespace Bildvitta\IssJuridico\Models;
 
 use Bildvitta\IssJuridico\Traits\UsesJuridicoDB;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class SignerDocument extends Model
+class DocumentType extends Model
 {
     use SoftDeletes, UsesJuridicoDB;
 
     protected $connection = 'iss-juridico';
 
-    public function document(): BelongsTo
+    public function documents(): HasMany
     {
-        return $this->belongsTo(Document::class);
+        return $this->hasMany(Document::class);
     }
 }
